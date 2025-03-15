@@ -1,0 +1,153 @@
+/* 全局样式 */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top left, #e6f7ff 0%, #b3e0ff 50%, #80c1ff 100%);
+    color: #333;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    overflow-x: hidden;
+}
+
+.background-image {
+    background-image: url('images/10.jpg');
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeInBackground 2s ease-out;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.3); /* 调整透明度 */
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 5px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 61, 130, 0.4);
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide {
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-arrow-left {
+    left: 10px;
+}
+
+.slider-arrow-right {
+    right: 10px;
+}
+
+.image-description {
+    flex: 1;
+    font-size: 18px;
+    color: #555;
+}
+
+.image-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(160deg, #007BFF 0%, #0056b3 60%, #003d82 100%);
+    color: white;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.image-description p {
+    font-family: 'Cormorant Garamond', serif; /* 更有质感的字体 */
+    font-size: 20px; /* 适当增大字体 */
+    font-weight: 400; /* 调整字体粗细 */
+    color: #4a4a4a; /* 更柔和的文字颜色 */
+    letter-spacing: 0.05em; /* 增加字母间距 */
+    line-height: 1.6; /* 调整行高 */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* 添加轻微文字阴影 */
+    max-width: 800px; /* 限制文字最大宽度 */
+    margin: 0 auto; /* 水平居中 */
+    padding: 0 20px; /* 左右内边距 */
+}
